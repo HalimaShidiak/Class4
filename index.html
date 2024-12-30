@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNISKILLS Header</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Header Styles */
+.header {
+    background-color: #bcc7c8;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+}
+.search-icon {
+    background-color: #f4f4f4;
+    ;
+}
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 100px;
+    padding-right: 300px
+}
+
+.nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s;
+    font-family: 'Goldeman', cursive;
+    margin: 20px;
+}
+
+.nav ul li a:hover {
+    color: #007bff;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(to right, #003b7c, #0056a1);
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.hero-content h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.hero-content h1 span {
+    color: #bf79d2;
+}
+.hero-content{
+    text-align: left;
+    padding-left: 50px;
+}
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.register-btn {
+    padding: 10px 20px;
+    background-color: #00c4ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.register-btn:hover {
+    background-color: #0097cc;
+}
+
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <!-- Logo -->
+            <div class="logo">
+                <img src="uniskills-logo.png" alt="UNISKILLS Logo">
+            </div>
+            <!-- Navigation -->
+            <nav class="nav">
+                <ul>
+                    <li><a href="#skills-section">Skills Section</a></li>
+                    <li><a href="#courses">Courses</a></li>
+                    <li><a href="#workshop">Workshop</a></li>
+                    <li><a href="#search"><span class="search-icon">🔍</span> Search</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="hero">
+        <div class="hero-content">
+            <h1>Empowering Youth <br> with <span>UNISKILLS</span></h1>
+            <p>Join Our List of +14,000 Students</p>
+            <button class="register-btn">Register Now</button>
+        </div>
+    </main>
+</body>
+</html>
