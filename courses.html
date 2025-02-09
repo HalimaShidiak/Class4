@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNISKILLS Header</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            color: black;
+            font-family: "Goldman", serif;
+            overflow-x: hidden; /* Prevents horizontal scrolling */
+        }
+
+        /* Navigation Styles */
+        nav {
+            background-color: #bcc7c8;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        #nav-logo img {
+            width: 120px;
+            height: auto;
+        }
+
+        #nav-pages {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        #nav-pages a {
+            color: white;
+            font-size: 16px;
+            text-decoration: none;
+        }
+
+        #nav-pages a:hover {
+            color: #BF79D2;
+        }
+
+        #nav-pages .fa-user {
+            font-size: 20px;
+            color: white;
+        }
+
+        /* Search Bar Styles */
+        #search-bar input {
+            padding: 8px 12px;
+            border-radius: 5px;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            background-color: rgba(255, 255, 255, 0.2);
+            color: white;
+            font-size: 14px;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        #search-bar input::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        #search-bar input:focus {
+            background-color: rgba(255, 255, 255, 0.5);
+            border-color: rgba(255, 255, 255, 0.8);
+        }
+
+        /* Course List Styles */
+        .course-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 40px 20px;
+            justify-content: space-around;
+        }
+
+        .course-item {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: left;
+            padding: 20px;
+            width: 250px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .course-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .course-item img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        .course-item h3 {
+            margin: 10px 0;
+            font-size: 18px;
+            color: #9b59b6;
+        }
+
+        .course-item p {
+            font-size: 14px;
+            color: #333;
+        }
+
+        .course-item .instructor {
+            font-size: 12px;
+            color: #777;
+            margin-top: 5px;
+        }
+
+        .course-item .students {
+            font-size: 12px;
+            color: #555;
+        }
+
+        .course-item .btn-enroll {
+            background-color: #9b59b6;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .course-item .btn-enroll:hover {
+            background-color: #bf79d2;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #4b4b4b;
+            color: white;
+            padding: 40px 20px;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-column {
+            flex: 1 1 30%;
+            margin: 10px 20px;
+        }
+
+        .footer-column h3 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #9b59b6;
+        }
+
+        .footer-column p,
+        .footer-column a {
+            font-size: 14px;
+            margin: 8px 0;
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer-column a:hover {
+            color: #9b59b6;
+        }
+
+        .footer-social-icons {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .footer-social-icons a {
+            color: white;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        .footer-social-icons a:hover {
+            color: #9b59b6;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 14px;
+            color: #ccc;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            #nav-pages {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+
+            .footer-container {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .footer-column {
+                flex: 1 1 100%;
+                margin: 20px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div id="nav-logo">
+            <img src="images/logo2.png" alt="UniSkills Logo">
+        </div>
+        <div id="nav-pages">
+            <a href="courses">COURSES</a>
+            <a href="skills">SKILLS</a>
+            <a href="workshops">WORKSHOPS</a>
+            <div id="search-bar">
+                <input type="text" placeholder="Search...">
+            </div>
+            <a href="#"><i class="fa-solid fa-user" style="margin-right: 50px;"></i></a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1 class="title" style="color: #BF79D2; margin-left: 60px; margin-top: 30px;">Our Courses</h1>
+        <div class="course-list">
+            <div class="course-item">
+                <img src="images/webdev.jpeg" alt="Web Development">
+                <h3>Web Development</h3>
+                <p>Learn to build dynamic websites using HTML, CSS, and JavaScript. Enroll today!</p>
+                <div class="instructor">Instructor: John Doe</div>
+                <div class="students">500+ Students</div>
+                <button class="btn-enroll">Enroll Now</button>
+            </div>
+            <div class="course-item">
+                <img src="images/digtal marketing.jpeg" alt="Digital Marketing">
+                <h3>Digital Marketing</h3>
+                <p>Master SEO, social media marketing, and more. Already loved by 300+ students.</p>
+                <div class="instructor">Instructor: Jane Smith</div>
+                <div class="students">300+ Students</div>
+                <button class="btn-enroll">Enroll Now</button>
+            </div>
+            <div class="course-item">
+                <img src="images/C.jpeg" alt="Data Science">
+                <h3>Data Science</h3>
+                <p>Learn Python and machine learning to analyze data effectively. Enroll with 400+ peers!</p>
+                <div class="instructor">Instructor: Alex Johnson</div>
+                <div class="students">400+ Students</div>
+                <button class="btn-enroll">Enroll Now</button>
+            </div>
+            <div class="course-item">
+                <img src="images/Graphic.jpeg" alt="Graphic Design">
+                <h3>Graphic Design</h3>
+                <p>Unleash your creativity with Photoshop and Illustrator. Join 250+ creative learners.</p>
+                <div class="instructor">Instructor: Sarah Lee</div>
+                <div class="students">250+ Students</div>
+                <button class="btn-enroll">Enroll Now</button>
+            </div>
+            <div class="course-item">
+                <img src="images/app.jpeg" alt="App Development">
+                <h3>App Development</h3>
+                <p>Build native mobile apps with React Native. Join a community of developers today!</p>
+                <div class="instructor">Instructor: Mike Brown</div>
+                <div class="students">350+ Students</div>
+                <button class="btn-enroll">Enroll Now</button>
+            </div>
+            <div class="course-item">
+                <img src="images/cloud.jpeg" alt="Cloud Computing">
+                <h3>Cloud Computing</h3>
+                <p>Master cloud platforms like AWS, Azure, and GCP. Learn to deploy scalable solutions.</p>
+                <div class="instructor">Instructor: Emma White</div>
+                <div class="students">420+ Students</div>
+                <button class="btn-enroll">Enroll Now</button>
+            </div>
+            <!-- Added 4 more courses -->
+            <div class="course-item">
+                <img src="images/Ai.jpeg" alt="AI & Machine Learning">
+                <h3>AI & Machine Learning</h3>
+                <p>Explore artificial intelligence and its applications in real-world scenarios.</p>
+                <div class="instructor">Instructor: Richard Black</div>
+                <div class="students">450+ Students</div>
+                <button class="btn-enroll">Enroll Now</button>
+            </div>
+            <div class="course-item">
+                <img src="images/Cyber Security.jpeg" alt="Cybersecurity">
+                <h3>Cybersecurity</h3>
+                <p>Learn to secure networks and data against cyber threats.</p>
+                <div class="instructor">Instructor: Lily Green</div>
+                <div class="students">330+ Students</div>
+                <button class="btn-enroll">Enroll Now</button>
+            </div>
+            <div class="course-item">
+                <img src="images/photography.jpeg" alt="Photography">
+                <h3>Photography</h3>
+                <p>Master the art of photography from beginner to expert.</p>
+                <div class="instructor">Instructor: David King</div>
+                <div class="students">280+ Students</div>
+                <button class="btn-enroll">Enroll Now</button>
+            </div>
+            <div class="course-item">
+                <img src="images/Public.jpeg" alt="Public Speaking">
+                <h3>Public Speaking</h3>
+                <p>Overcome stage fright and deliver powerful speeches.</p>
+                <div class="instructor">Instructor: Rachel Gray</div>
+                <div class="students">320+ Students</div>
+                <button class="btn-enroll">Enroll Now</button>
+            </div>
+            <div class="course-item">
+                <img src="images/Time Management Tips .jpeg" alt="Public Speaking">
+                <h3>Time Management </h3>
+                <p>Master the art of prioritization to achieve more in less time and reduce stress.</p>
+                <div class="instructor">Instructor: Rachel Gray</div>
+                <div class="students">420+ Students</div>
+                <button class="btn-enroll">Enroll Now</button>
+            </div>
+            <div class="course-item">
+                <img src="images/Database.jpeg" alt="Public Speaking">
+                <h3>Database Management</h3>
+                <p>Design, manage, and query databases efficiently to support data-driven decisions.</p>
+                <div class="instructor">Instructor: Rachel Gray</div>
+                <div class="students">280+ Students</div>
+                <button class="btn-enroll">Enroll Now</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>About UniSkills</h3>
+                <p>Empowering youth with the skills they need to succeed in their careers and personal growth. Join us and be part of a thriving learning community.</p>
+            </div>
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <a href="#">Home</a>
+                <a href="#">Courses</a>
+                <a href="#">Skills</a>
+                <a href="#">Workshops</a>
+            </div>
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <p>Email: info@uniskills.com</p>
+                <p>Phone: +123 456 789</p>
+                <div class="footer-social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2025 UniSkills. All rights reserved.
+        </div>
+    </footer>
+</body>
+</html>

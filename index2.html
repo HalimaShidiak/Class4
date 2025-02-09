@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNISKILLS Header</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            color: white;
+            font-family: "Goldman", serif;
+            overflow-x: hidden; /* Prevents horizontal scrolling */
+        }
+
+        /* Navigation Styles */
+        nav {
+            background-color: #bcc7c8;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        #nav-logo img {
+            width: 120px;
+            height: auto;
+        }
+
+        #nav-pages {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        #nav-pages a {
+            color: white;
+            font-size: 16px;
+            text-decoration: none;
+        }
+
+        #nav-pages a:hover {
+            color: #BF79D2;
+        }
+
+        #nav-pages .fa-user {
+            font-size: 20px;
+            color: white;
+        }
+
+        /* Search Bar Styles */
+        #search-bar input {
+            padding: 8px 12px;
+            border-radius: 5px;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            background-color: rgba(255, 255, 255, 0.2);
+            color: white;
+            font-size: 14px;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        #search-bar input::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        #search-bar input:focus {
+            background-color: rgba(255, 255, 255, 0.5);
+            border-color: rgba(255, 255, 255, 0.8);
+        }
+
+        /* Main Content */
+        main {
+            margin-top: 10px;
+        }
+
+        #main1 {
+            padding: 20px;
+            width: 100%;
+            background: url('./images/main2.jpeg') no-repeat center center;
+            background-size: cover;
+            color: white;
+            height: auto;
+        }
+
+        #main1 p {
+            font-size: 36px;
+            line-height: 1.4;
+            margin: 10px 130px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            
+        }
+
+        #main1 p:nth-child(2) {
+            color: #BF79D2;
+        }
+
+        button {
+            padding: 12px 24px;
+            background-color: #BF79D2;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            margin: 20px 130px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #9b5cb7;
+        }
+
+        /* Main2 Section */
+        #main2 {
+            display: flex;
+            flex-direction: row;  /* Arrange items horizontally */
+            align-items: center;  /* Vertically center the items */
+            justify-content: space-between;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        #main2 img {
+            max-width: 50%;  /* Make sure the image takes half the space */
+            height: auto;
+            margin-right: 20px;
+        }
+
+        #main2 .content {
+            max-width: 45%;  /* Keep the text content from taking too much space */
+            margin-left: 0;  /* Remove any left margin */
+        }
+
+        #main2 .content h1 {
+            color: #9b5cb7;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        #main2 .content p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: black;
+            margin-top: 0;
+        }
+
+        #main2 .content button {
+            padding: 12px 24px;
+            background-color: #9b5cb7;
+            border-radius: 8px;
+            cursor: pointer;
+            color: white;
+            font-size: 16px;
+            margin-top: 20px;
+            border: none;
+        }
+
+        #main2 .content button:hover {
+            background-color: #7f4b8f;
+        }
+
+        /* Three Images Section */
+        #three-images {
+            display: flex;
+            justify-content: space-between;  /* Spread out the images */
+            margin-top: 40px;
+            padding: 0 20px;
+        }
+
+        .image-container {
+            text-align: center;
+            width: 30%;  /* Each image container takes 30% of the width */
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 250px;  /* Set a fixed height for all images */
+            object-fit: cover;  /* Ensures images maintain their aspect ratio */
+            border-radius: 8px;
+        }
+
+        .image-container p {
+            font-size: 18px;
+            margin-top: 10px;
+            color: black;
+            text-align: left;  /* Align paragraph to the left */
+            font-weight: bold;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            #nav-pages {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+
+            #main1 {
+                width: 90%;
+                margin: 0 auto;
+            }
+
+            #main1 p {
+                font-size: 28px;
+            }
+
+            button {
+                width: 100%;
+            }
+
+            #main2 {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            #main2 img {
+                width: 100%;
+                height: auto;
+                margin-bottom: 10px;
+            }
+
+            #main2 .content {
+                text-align: center;
+                margin-left: 0;
+                max-width: 100%;
+            }
+
+            #three-images {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .image-container {
+                width: 80%;
+                margin-bottom: 20px;
+            }
+
+            .image-container p {
+                font-size: 16px;
+                text-align: center;  /* Align paragraph to center on small screens */
+            }
+             }
+            .container {
+              max-width: 1200px;
+             margin: 0 auto;
+             padding: 20px;
+            }
+
+            .title {
+            text-align: left;
+            font-size: 24px;
+            color: #9b59b6;
+            font-weight: bold;
+            margin-bottom: 40px;
+            }
+
+            .reviews {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-between;
+            }
+
+            .review {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            flex: 1 1 calc(25% - 20px);
+            box-sizing: border-box;
+            }
+
+            .review h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: black;   
+            }
+
+            .review .stars {
+            color: #f39c12;
+            margin-bottom: 10px;
+            }
+
+            .review p {
+            font-size: 14px;
+            line-height: 1.5;
+            color: black;
+            }
+            .container1 {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            text-align: center;
+            }
+
+            .form-section {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 40px;
+            }
+
+            /* Email Section */
+        .form-section {
+            display: flex;
+            flex-wrap: nowrap;
+            gap: 20px;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+
+        .form-box {
+            flex: 1 1 calc(50% - 20px);
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 40%;
+        }
+
+        .form-box h2 {
+            color: #9b59b6;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .form-box p {
+            font-size: 14px;
+            margin-bottom: 15px;
+            color: #666;
+        }
+
+        .form-box input[type="email"] {
+            width: 90%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #4b4b4b;
+            color: white;
+            padding: 40px 20px;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-column {
+            flex: 1 1 30%;
+            margin: 10px 20px;
+        }
+
+        .footer-column h3 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #9b59b6;
+        }
+
+        .footer-column p,
+        .footer-column a {
+            font-size: 14px;
+            margin: 8px 0;
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer-column a:hover {
+            color: #9b59b6;
+        }
+
+        .footer-social-icons {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .footer-social-icons a {
+            color: white;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        .footer-social-icons a:hover {
+            color: #9b59b6;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 14px;
+            color: #ccc;
+        }
+
+        @media (max-width: 768px) {
+            .footer-container {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .footer-column {
+                flex: 1 1 100%;
+                margin: 20px 0;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <div id="nav-logo">
+            <img src="images/logo2.png" alt="UniSkills Logo">
+        </div>
+        <div id="nav-pages">
+            <a href="courses">COURSES</a>
+            <a href="skills">SKILLS</a>
+            <a href="workshops">WORKSHOPS</a>
+            <div id="search-bar">
+                <input type="text" placeholder="Search...">
+            </div>
+            <a href="#"><i class="fa-solid fa-user" style="margin-right: 50px;"></i></a>
+        </div>
+    </nav>
+
+    <main>
+        <div id="main1">
+            <p>EMPOWERING YOUTH</p>
+            <p>WITH UNISKILLS!</p>
+            <p>Join Our List Of +14,000 Students</p>
+            <button>Join Now!</button>
+        </div>
+        <p style="margin-top: 20px; font-size: 40px; line-height: 1.6; color: black; text-align: center;">
+            All Your Courses In One Place...!
+        </p>
+        <h1 style="color: #BF79D2; margin-left: 25px; margin-bottom: 0;">Workshops</h1>
+        <div id="main2">
+            <img src="images/PPP (1).jpg" alt="Workshop Image">
+            <div class="content">
+                <h1>Social Media 101 with Adobe Express</h1>
+                <p>
+                    Join us for the Social Media 101 with Adobe Express workshop, led by Rafik El Hariri, an award-winning illustrator and graphic designer.
+                    <br><br>
+                    📅 Date: 26 October 2024
+                    <br>
+                    🕒 Time: 3:00 PM – 5:00 PM
+                    <br>
+                    📍 Location: Masahet Nour
+                    <br><br>
+                    The workshop fee is 5$ including coffee ☕
+                    <br><br>
+                    If you have any questions, feel free to reach out. We’re excited to welcome you to the workshop!
+                </p>
+                <button>Register Now</button>
+            </div>
+        </div>
+        <h1 style="color: #BF79D2; margin-left: 25px; margin-bottom: 0;">Skills</h1>
+        <div id="three-images">
+            <div class="image-container">
+                <img src="./images/C.jpeg" alt="Image 1">
+                <p>TECHNICAL SKILLS</p>
+                <p style="color: #BF79D2;font-size: 12px;">+700 Students</p>
+            </div>
+            <div class="image-container">
+                <img src="./images/B.jpeg" alt="Image 2">
+                <p>Soft Skills</p>
+                <p style="color: #BF79D2; font-size: 12px;">+ 1400 Students</p>
+            </div>
+            <div class="image-container">
+                <img src="./images/A.jpeg" alt="Image 3">
+                <p>Study Skills</p>
+                <p style="color: #BF79D2; font-size: 12px;">+ 800 Students</p>
+            </div>
+        </div>
+
+        <h1 style="color: #BF79D2; margin-left: 25px; margin-bottom: 0;">Students Rates</h1>
+        <div class="container">
+            <div class="reviews">
+                <div class="review">
+                    <h3>Zuher Harrouch</h3>
+                    <div class="stars">★★★★★</div>
+                    <p>"Exceptional Learning Experience! I've been using this platform for a few months, and it has completely transformed how I learn. The courses are well-structured, and the instructors are highly knowledgeable. I especially appreciate the flexibility to learn at my own pace. Highly recommended for anyone looking to upskill!"</p>
+                </div>
+                <div class="review">
+                    <h3>Mohammad Istanbouli</h3>
+                    <div class="stars">★★★★☆</div>
+                    <p>"Great Content but Room for Improvement. The platform offers a wide variety of courses across different fields, which is impressive. However, I feel that some of the older courses need to be updated to remain relevant. The app also occasionally lags, but overall, it's a great tool for learning."</p>
+                </div>
+                <div class="review">
+                    <h3>Humam Abd</h3>
+                    <div class="stars">★★★☆☆</div>
+                    <p>"Good for Beginners, Limited Advanced Content. I found this site useful when I started learning coding. The beginner courses are very detailed and easy to follow. However, when I reached more advanced levels, I felt there weren't enough in-depth resources. Still, a good starting point for learners."</p>
+                </div>
+                <div class="review">
+                    <h3>Ahmad Merhi</h3>
+                    <div class="stars">★★★★☆</div>
+                    <p>"Great Content but Room for Improvement. The platform offers a wide variety of courses across different fields, which is impressive. However, I feel that some of the older courses need to be updated to remain relevant. The app also occasionally lags, but overall, it's a great tool for learning."</p>
+                </div>
+            </div>
+        </div>
+         <div class="form-section">
+            <div class="form-box">
+                <h2>STUDENTS</h2>
+                <p>STAY UP TO DATE ABOUT OUR LATEST OFFERS!</p>
+                <input type="email" placeholder="YOUR EMAIL">
+            </div>
+            <div class="form-box">
+                <h2>INSTRUCTORS</h2>
+                <p>If you have a workshop that you want to promote, contact us</p>
+                <input type="email" placeholder="YOUR EMAIL">
+            </div>
+        </div>
+        <p style="color: #BF79D2; font-size: 32px; margin-left: 250px;">STAY UP TO DATE ABOUT OUR LATEST OFFERS!</p>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <!-- Column 1: About Us -->
+            <div class="footer-column">
+                <h3>About UniSkills</h3>
+                <p>Empowering youth with the skills they need to succeed in their careers and personal growth. Join us and be part of a thriving learning community.</p>
+            </div>
+
+            <!-- Column 2: Contact Us -->
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <p>Email: support@uniskills.com</p>
+                <p>Phone: +96170458923</p>
+                <p>Location: Tripoli, Azmi street</p>
+            </div>
+
+            <!-- Column 3: Follow Us -->
+            <div class="footer-column">
+                <h3>Follow Us</h3>
+                <div class="footer-social-icons">
+                    <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2025 UniSkills. All rights reserved.
+        </div>
+    </footer>
+</body>
+</html>
