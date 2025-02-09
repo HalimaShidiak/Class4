@@ -9,14 +9,15 @@
 
     <style>
        
-        body {
+     /* General Styles */
+     body {
             margin: 0;
-            color: white;
+            color: black;
             font-family: "Goldman", serif;
-            overflow-x: hidden; 
+            overflow-x: hidden; /* Prevents horizontal scrolling */
         }
 
-        
+        /* Navigation Styles */
         nav {
             background-color: #bcc7c8;
             padding: 10px 20px;
@@ -222,6 +223,73 @@
                 margin: 20px 0;
             }
         }
+
+            .workshop-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px; /* Reduced gap between workshops */
+            width: 100%;
+        }
+
+            .workshop {
+            display: flex;
+            flex-direction: row;
+            height: 35vh; /* Reduced height */
+            width: 100%;
+        }
+
+            .image-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }       
+
+            .workshop-image {
+            width: 75%;
+            height: auto;
+            max-height: 75%;
+            border-radius: 12px; /* Rounded corners */
+            object-fit: cover;
+        }
+
+            .workshop-info {
+            flex: 1;
+            padding: 15px; /* Reduced padding */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+            h3 {
+            margin: 0 0 8px;
+            font-size: 1.5rem; /* Reduced font size */
+            color: #333;
+        }
+
+            p {
+            margin: 4px 0;
+            font-size: 0.9rem; /* Smaller text */
+            color: #555;
+        }
+
+            .register-button {
+            margin-top: 12px;
+            background-color: #007bff;
+            color: white;
+            padding: 8px 12px; /* Smaller padding */
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.9rem; /* Reduced font size */
+            width: fit-content; /* Button adjusts to text size */
+            transition: background-color 0.3s;
+        }
+
+            .register-button:hover {
+            background-color: #0056b3;
+        }
+
     </style>
     </head>
 
@@ -229,25 +297,103 @@
 
         <nav>
             <div id="nav-logo">
-                <img src="images/logo2.png" alt="UniSkills Logo">
+                <a href="index2.html">
+                    <img src="images/logo2.png" alt="UniSkills Logo"> 
+                    </a>
             </div>
             <div id="nav-pages">
-                <a href="courses">COURSES</a>
-                <a href="skills">SKILLS</a>
-                <a href="workshops">WORKSHOPS</a>
+                <a href="courses.html">COURSES</a>
+                <a href="workshops.html">WORKSHOPS</a>
+                <a href="aboutus.html">ABOUT US</a>
                 <div id="search-bar">
                     <input type="text" placeholder="Search...">
                 </div>
                 <a href="#"><i class="fa-solid fa-user" style="margin-right: 50px;"></i></a>
             </div>
         </nav>
-
-        
-
-
-
-
-        <footer>
+    
+        <h1 style="color:#BF79D2; margin-left: 45px;">Workshops</h1>
+        <div class="workshop-container" style="padding-bottom: 150px;">
+            <!-- First Workshop -->
+            <div class="workshop">
+              <div class="image-container">
+                <img src="images/worshop1.jpeg" alt="Workshop Image" class="workshop-image" />
+              </div>
+              <div class="workshop-info">
+                <h3>Social Media 101 w/ Adobe Express</h3>
+                <p>
+                  Join us for the Social Media 101 with Adobe Express workshop, led by
+                  Rafik El Hariri, an award-winning illustrator and graphic designer.
+                </p>
+                <p><strong>Date:</strong> 28 October 2024</p>
+                <p><strong>Time:</strong> 3:00 PM – 5:00 PM</p>
+                <p><strong>Location:</strong> Mashehat Nour</p>
+                <p>The workshop fee is $5 including coffee ☕</p>
+                <button class="register-button"> <a href="https://docs.google.com/forms/d/e/1FAIpQLScgDCbm2HjMReX6lD8ukgvBQl4kGNqx4GNox0XD8u4Zw2HJ2w/viewform?usp=header">REGISTER NOW</a></button>
+              </div>
+            </div>
+          
+            <!-- Second Workshop -->
+            <div class="workshop">
+              <div class="image-container">
+                <img src="images/worshop2.1.jpeg" alt="Workshop Image" class="workshop-image" />
+              </div>"
+              <div class="workshop-info">
+                <h3>Discover Your Inner Artist: Digital Illustration</h3>
+                <p>
+                  Led by Sara Khaled, a renowned digital artist and illustrator.
+                </p>
+                <p><strong>Date:</strong> 15 March 2025</p>
+                <p><strong>Time:</strong> 10:00 AM – 12:00 PM</p>
+                <p><strong>Location:</strong> Creative Space Studio, Downtown</p>
+                <p>
+                  Explore the world of digital illustration with hands-on guidance from a
+                  seasoned leader. Learn to create beautiful digital art!
+                </p>
+                <button class="register-button"> <a href="https://forms.gle/cZwcmJNKf85SXqwK8"> REGISTER NOW </a> </button>
+              </div>
+            </div>
+          
+            <!-- Third Workshop -->
+            <div class="workshop">
+              <div class="image-container">
+                <img src="images/worshop3.jpeg" alt="Workshop Image" class="workshop-image" />
+              </div>
+              <div class="workshop-info">
+                <h3>Photography for Beginners</h3>
+                <p>
+                  Learn the basics of photography with expert guidance from Mark Adams, a
+                  professional photographer with over a decade of experience.
+                </p>
+                <p><strong>Date:</strong> 22 April 2025</p>
+                <p><strong>Time:</strong> 2:00 PM – 4:00 PM</p>
+                <p><strong>Location:</strong> City Arts Center</p>
+                <p>Fee: $10, including a free guidebook.</p>
+                <button class="register-button"> <a href="https://forms.gle/V5hvSG4gcE76Ge7dA"> REGISTER NOW </a></button>
+              </div>
+            </div>
+          
+            <!-- Fourth Workshop -->
+            <div class="workshop">
+              <div class="image-container">
+                <img src="images/worshop4.jpeg" alt="Workshop Image" class="workshop-image" />
+              </div>
+              <div class="workshop-info">
+                <h3>Creative Writing Workshop</h3>
+                <p>
+                  Discover the art of storytelling with best-selling author Emily Carter
+                  in this interactive creative writing workshop.
+                </p>
+                <p><strong>Date:</strong> 8 May 2025</p>
+                <p><strong>Time:</strong> 5:00 PM – 7:00 PM</p>
+                <p><strong>Location:</strong> Downtown Library</p>
+                <p>Fee: $15, including materials.</p>
+                <button class="register-button"> <a href="https://forms.gle/nqJo875B5Sp4tHTW8"> REGISTER NOW </a></button>
+              </div>
+            </div>
+          </div>          
+    
+          <footer>
             <div class="footer-container">
                 <!-- Column 1: About Us -->
                 <div class="footer-column">
@@ -258,8 +404,8 @@
                 <!-- Column 2: Contact Us -->
                 <div class="footer-column">
                     <h3>Contact Us</h3>
-                    <p>Email: support@uniskills.com</p>
-                    <p>Phone: +96170458923</p>
+                    <p>Email: uniskills01gmail.com</p>
+                    <p>Phone: +96181196315</p>
                     <p>Location: Tripoli, Azmi street</p>
                 </div>
     
@@ -269,7 +415,7 @@
                     <div class="footer-social-icons">
                         <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
                         <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
-                        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.instagram.com/uniskills2025?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><i class="fab fa-instagram"></i></a>
                         <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
                     </div>
                 </div>

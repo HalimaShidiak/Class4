@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNISKILLS Header</title>
+    <link href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+
+    <style>
+       
+    /* General Styles */
+body {
+    margin: 0;
+    color: black;
+    font-family: "Goldman", serif;
+    overflow-x: hidden;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+}
+
+h1, h2, h3 {
+    color: #9b59b6; /* Purple for headings */
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+p {
+    color: black;
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+/* Navigation Styles */
+nav {
+            background-color: #bcc7c8;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        #nav-logo img {
+            width: 120px;
+            height: auto;
+        }
+
+        #nav-pages {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        #nav-pages a {
+            color: white;
+            font-size: 16px;
+            text-decoration: none;
+        }
+
+        #nav-pages a:hover {
+            color: #BF79D2;
+        }
+
+        #nav-pages .fa-user {
+            font-size: 20px;
+            color: white;
+        }
+
+        /* Search Bar Styles */
+        #search-bar input {
+            padding: 8px 12px;
+            border-radius: 5px;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            background-color: rgba(255, 255, 255, 0.2);
+            color: white;
+            font-size: 14px;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        #search-bar input::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        #search-bar input:focus {
+            background-color: rgba(255, 255, 255, 0.5);
+            border-color: rgba(255, 255, 255, 0.8);
+        }
+
+
+/* Main Content Container */
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Section Styles */
+.section {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.section h2 {
+    color: #9b59b6; /* Purple for section headings */
+}
+
+.section ul {
+    padding-left: 20px;
+    list-style: disc;
+}
+
+.section ul li {
+    margin-bottom: 10px;
+}
+
+/* Call-to-Action Button */
+.cta {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.cta a {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #9b59b6; /* Purple background */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+}
+
+.cta a:hover {
+    background-color: #bf79d2; /* Lighter purple on hover */
+}
+
+  /* Footer Styles */
+  footer {
+            background-color: #4b4b4b;
+            color: white;
+            padding: 40px 20px;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-column {
+            flex: 1 1 30%;
+            margin: 10px 20px;
+        }
+
+        .footer-column h3 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #9b59b6;
+        }
+
+        .footer-column p,
+        .footer-column a {
+            font-size: 14px;
+            margin: 8px 0;
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer-column a:hover {
+            color: #9b59b6;
+        }
+
+        .footer-social-icons {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .footer-social-icons a {
+            color: white;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        .footer-social-icons a:hover {
+            color: #9b59b6;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 14px;
+            color: #ccc;
+        }
+
+        @media (max-width: 768px) {
+            .footer-container {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .footer-column {
+                flex: 1 1 100%;
+                margin: 20px 0;
+            }
+        }
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #nav-pages {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    #search-bar {
+        width: 100%;
+    }
+
+    #search-bar input {
+        width: 100%;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-column {
+        flex: 1 1 100%;
+        margin: 20px 0;
+    }
+
+    .cta a {
+        width: 100%;
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+}
+</style>
+    </head>
+
+    <body>
+
+        <nav>
+            <div id="nav-logo">
+                <a href="index2.html">
+                    <img src="images/logo2.png" alt="UniSkills Logo"> 
+                    </a>
+            </div>
+            <div id="nav-pages">
+                <a href="courses.html">COURSES</a>
+                <a href="workshops.html">WORKSHOPS</a>
+                <a href="aboutus.html">ABOUT US</a>
+                <div id="search-bar">
+                    <input type="text" placeholder="Search...">
+                </div>
+                <a href="#"><i class="fa-solid fa-user" style="margin-right: 50px;"></i></a>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="section">
+                <h2>Welcome to UniSkills</h2>
+                <p>Your ultimate destination for mastering essential skills during your university journey. At UniSkills, we empower students with practical soft skills and study techniques to excel both academically and personally.</p>
+            </div>
+    
+            <div class="section">
+                <h2>Our Mission</h2>
+                <p>To equip university students with the tools they need to succeed by providing engaging workshops and courses designed to meet the demands of modern student life.</p>
+            </div>
+    
+            <div class="section">
+                <h2>What We Offer</h2>
+                <p>We provide a range of services tailored for university students, including:</p>
+                <ul>
+                    <li>Soft skills workshops (e.g., leadership, communication, teamwork).</li>
+                    <li>Study skills training (e.g., time management, productivity, stress management).</li>
+                    <li>Practical guidance for real-world readiness.</li>
+                </ul>
+            </div>
+    
+            <div class="section">
+                <h2>Why Choose Us?</h2>
+                <p>At UniSkills, we stand out with our expert-led programs, flexible learning options, and a strong commitment to helping students build confidence and resilience for life beyond the classroom.</p>
+            </div>
+    
+            <div class="cta">
+                <a href="courses.html">Explore Our Courses</a>
+            </div>
+        </div>
+        <footer>
+            <div class="footer-container">
+                <!-- Column 1: About Us -->
+                <div class="footer-column">
+                    <h3>About UniSkills</h3>
+                    <p>Empowering youth with the skills they need to succeed in their careers and personal growth. Join us and be part of a thriving learning community.</p>
+                </div>
+    
+                <!-- Column 2: Contact Us -->
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <p>Email: uniskills01gmail.com</p>
+                    <p>Phone: +96181196315</p>
+                    <p>Location: Tripoli, Azmi street</p>
+                </div>
+    
+                <!-- Column 3: Follow Us -->
+                <div class="footer-column">
+                    <h3>Follow Us</h3>
+                    <div class="footer-social-icons">
+                        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/uniskills2025?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2025 UniSkills. All rights reserved.
+            </div>
+        </footer>
+    </body>
+    </html>

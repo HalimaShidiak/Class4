@@ -434,14 +434,46 @@
     </style>
 </head>
 <body>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyDe5oyDTNvyj8uABVRIrd3u7m7fu-7dJRA",
+          authDomain: "uniskills-d07fc.firebaseapp.com",
+          projectId: "uniskills-d07fc",
+          storageBucket: "uniskills-d07fc.firebasestorage.app",
+          messagingSenderId: "375691507795",
+          appId: "1:375691507795:web:ac16ec1f9589cf22592ea6",
+          measurementId: "G-5T64DBXTR7"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+      </script>
+       <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"></script>
+       <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js"></script>
+       <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js"></script>
+       <!-- Add other Firebase services you need -->
+   
+       <!-- Your custom JavaScript file -->
+       <script src="app.js"></script>
     <nav>
         <div id="nav-logo">
-            <img src="images/logo2.png" alt="UniSkills Logo">
+            <a href="index2.html">
+            <img src="images/logo2.png" alt="UniSkills Logo"> 
+            </a>
         </div>
         <div id="nav-pages">
-            <a href="courses">COURSES</a>
-            <a href="skills">SKILLS</a>
-            <a href="workshops">WORKSHOPS</a>
+            <a href="courses.html">COURSES</a>
+            <a href="workshops.html">WORKSHOPS</a>
+            <a href="aboutus.html">ABOUT US</a>
             <div id="search-bar">
                 <input type="text" placeholder="Search...">
             </div>
@@ -454,12 +486,17 @@
             <p>EMPOWERING YOUTH</p>
             <p>WITH UNISKILLS!</p>
             <p>Join Our List Of +14,000 Students</p>
-            <button>Join Now!</button>
+            <button><a href="aboutus.html" style=" text-decoration: none">Discover more!</a></button>
         </div>
         <p style="margin-top: 20px; font-size: 40px; line-height: 1.6; color: black; text-align: center;">
             All Your Courses In One Place...!
         </p>
-        <h1 style="color: #BF79D2; margin-left: 25px; margin-bottom: 0;">Workshops</h1>
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <h1 style="color: #BF79D2; margin-left: 25px; margin-bottom: 0;">Workshops</h1>
+            <a href="workshops.html" style="color: #BF79D2; text-decoration: none; margin-right: 20px;">See All</a>
+        </div>
+        
+
         <div id="main2">
             <img src="images/PPP (1).jpg" alt="Workshop Image">
             <div class="content">
@@ -477,25 +514,29 @@
                     <br><br>
                     If you have any questions, feel free to reach out. We’re excited to welcome you to the workshop!
                 </p>
-                <button>Register Now</button>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLScgDCbm2HjMReX6lD8ukgvBQl4kGNqx4GNox0XD8u4Zw2HJ2w/viewform?usp=header">
+                <button> Register Now</button> </a>
             </div>
         </div>
-        <h1 style="color: #BF79D2; margin-left: 25px; margin-bottom: 0;">Skills</h1>
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <h1 style="color: #BF79D2; margin-left: 25px; margin-bottom: 0;">Skills</h1>
+            <a href="courses.html" style="color: #BF79D2; text-decoration: none; margin-right: 20px;">Show More</a>
+        </div>
         <div id="three-images">
             <div class="image-container">
-                <img src="./images/C.jpeg" alt="Image 1">
-                <p>TECHNICAL SKILLS</p>
-                <p style="color: #BF79D2;font-size: 12px;">+700 Students</p>
+                <img src="images/webdev.jpeg" alt="Web Development">
+                <p>Web Development</p>
+                <p style="color: #BF79D2;font-size: 12px;">10.4M Students</p>
             </div>
             <div class="image-container">
-                <img src="./images/B.jpeg" alt="Image 2">
-                <p>Soft Skills</p>
-                <p style="color: #BF79D2; font-size: 12px;">+ 1400 Students</p>
+                <img src="images/digtal marketing.jpeg" alt="Digital Marketing">
+                <p>Digital Marketing</p>
+                <p style="color: #BF79D2; font-size: 12px;"> 300K+ Students</p>
             </div>
             <div class="image-container">
-                <img src="./images/A.jpeg" alt="Image 3">
-                <p>Study Skills</p>
-                <p style="color: #BF79D2; font-size: 12px;">+ 800 Students</p>
+                <img src="images/C.jpeg" alt="Data Science">
+                <p>Data Science</p>
+                <p style="color: #BF79D2; font-size: 12px;"> 3.7M Students</p>
             </div>
         </div>
 
@@ -550,8 +591,8 @@
             <!-- Column 2: Contact Us -->
             <div class="footer-column">
                 <h3>Contact Us</h3>
-                <p>Email: support@uniskills.com</p>
-                <p>Phone: +96170458923</p>
+                <p>Email: uniskills01gmail.com</p>
+                <p>Phone: +96181196315</p>
                 <p>Location: Tripoli, Azmi street</p>
             </div>
 
@@ -561,7 +602,7 @@
                 <div class="footer-social-icons">
                     <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
                     <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
-                    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.instagram.com/uniskills2025?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><i class="fab fa-instagram"></i></a>
                     <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
                 </div>
             </div>

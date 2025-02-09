@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Signup Form</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif; /* Professional font */
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    background-color: #fff;
+    padding: 50px 60px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+h1 {
+    font-size: 32px;
+    color: #9b59b6; /* Purple theme */
+    font-weight: 700; /* Bold */
+    margin-bottom: 30px;
+    letter-spacing: -0.5px;
+}
+
+h2 {
+    font-size: 28px;
+    color: #9b59b6; /* Purple theme */
+    font-weight: 700; /* Bold */
+    margin-bottom: 30px;
+    letter-spacing: -0.5px;
+}
+
+/* Form Styles */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Increased spacing */
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 12px; /* Increased spacing */
+}
+
+label {
+    font-size: 16px;
+    color: #333; /* Black text */
+    font-weight: 600; /* Semi-bold */
+}
+
+input {
+    padding: 14px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    font-weight: 500; /* Medium */
+}
+
+input:focus {
+    border-color: #9b59b6;
+    box-shadow: 0 0 8px rgba(155, 89, 182, 0.2);
+}
+
+button {
+    padding: 16px;
+    background-color: #9b59b6;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 600; /* Semi-bold */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #8e44ad;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+p {
+    font-size: 16px;
+    color: #333; /* Black text */
+    font-weight: 500; /* Medium */
+    margin-top: 20px;
+}
+
+a {
+    color: #9b59b6;
+    text-decoration: none;
+    font-weight: 600; /* Semi-bold */
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #8e44ad;
+    text-decoration: underline;
+}
+
+/* Professional Effects */
+.input-group input {
+    transition: all 0.3s ease;
+}
+
+.input-group input:hover {
+    border-color: #9b59b6;
+}
+
+button {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .container {
+        padding: 30px 20px;
+        border-radius: 10px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    input {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    button {
+        padding: 14px;
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+}
+</style>
+<body>
+    <script type="module" src="joinNow.js" defer></script>
+    <div class="container">
+        <!-- Login Form -->
+        <div class="form-container" id="login-form">
+            <h2>Login</h2>
+            <form id="login">
+                <div class="input-group">
+                    <label for="login-email">Email</label>
+                    <input type="email" id="login-email" placeholder="Enter your email" required>
+                </div>
+                <div class="input-group">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" placeholder="Enter your password" required>
+                </div>
+                <button type="submit">Login</button>
+            </form>
+            <p>Don't have an account? <a href="#" id="show-signup">Sign up</a></p>
+        </div>
+
+        <!-- Signup Form -->
+        <div class="form-container" id="signup-form" style="display: none;">
+            <h2>Sign Up</h2>
+            <form id="signup">
+                <div class="input-group">
+                    <label for="signup-email">Email</label>
+                    <input type="email" id="signup-email" placeholder="Enter your email" required>
+                </div>
+                <div class="input-group">
+                    <label for="signup-password">Password</label>
+                    <input type="password" id="signup-password" placeholder="Enter your password" required>
+                </div>
+                <div class="input-group">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" id="confirm-password" placeholder="Confirm your password" required>
+                </div>
+                <button type="submit">Sign Up</button>
+            </form>
+            <p>Already have an account? <a href="#" id="show-login">Login</a></p>
+        </div>
+    </div>
+
+    <script>
+        // Toggle between Login and Signup forms
+        document.getElementById('show-signup').addEventListener('click', (e) => {
+            e.preventDefault();
+            document.getElementById('login-form').style.display = 'none';
+            document.getElementById('signup-form').style.display = 'block';
+        });
+
+        document.getElementById('show-login').addEventListener('click', (e) => {
+            e.preventDefault();
+            document.getElementById('signup-form').style.display = 'none';
+            document.getElementById('login-form').style.display = 'block';
+        });
+    </script>
+</body>
+</html>
