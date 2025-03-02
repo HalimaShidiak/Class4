@@ -88,15 +88,19 @@
         }
 
         .course-item {
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            text-align: left;
-            padding: 20px;
-            width: 250px;
-            transition: transform 0.3s ease-in-out;
-        }
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: left;
+    padding: 20px;
+    width: 250px;
+    display: flex;
+    flex-direction: column; /* Make sure the content flows vertically */
+    justify-content: space-between; /* Ensures space between content */
+    height: 400px; /* Add a fixed height to make the course items consistent */
+    transition: transform 0.3s ease-in-out;
+}
 
         .course-item:hover {
             transform: translateY(-10px);
@@ -132,15 +136,17 @@
         }
 
         .course-item .btn-enroll {
-            background-color: #9b59b6;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-top: 10px;
-            transition: background-color 0.3s ease;
-        }
+    background-color: #9b59b6;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: auto; /* Pushes the button to the bottom of the course item */
+    transition: background-color 0.3s ease;
+    width: 50%; /* Ensure the button takes the full width of the container */
+    text-decoration: none;
+}
 
         .course-item .btn-enroll:hover {
             background-color: #bf79d2;
@@ -263,15 +269,15 @@
                 <p>Full Stack Web Development for Beginners (Full Course on HTML, CSS, JavaScript, Node.js, MongoDB)</p>
                 <div class="instructor">Instructor: FreeCodeCamp </div>
                 <div class="students">10.4M Students</div>
-                <button class="btn-enroll">  <a href="https://youtu.be/nu_pCVPKzTk?si=d_x1A8RMNEkbs1fz">Enroll Now </a></button>
+                <button class="btn-enroll">  <a href="https://youtu.be/nu_pCVPKzTk?si=d_x1A8RMNEkbs1fz">Start Now </a></button>
             </div>
             <div class="course-item">
                 <img src="images/digtal marketing.jpeg" alt="Digital Marketing">
                 <h3>Digital Marketing</h3>
                 <p>Master SEO, social media marketing, and more. Already loved by 300+ students.</p>
-                <div class="instructor">Instructor: Mohamad istanbouli</div>
+                <div class="instructor">Instructor: Mohamad Al Daye</div>
                 <div class="students">300+ Students</div>
-                <button class="btn-enroll"> <a href="https://www.udemy.com/share/10aFIk3@3UBqjmealzM18ILRTAgG78OsXg7Qq_Cwp2JygrbGnX-BMJlBe5Iu1Dndu7PVKj12Zg==/"> Enroll Now </a></button>
+                <button class="btn-enroll"> <a href="https://www.udemy.com/share/10aFIk3@3UBqjmealzM18ILRTAgG78OsXg7Qq_Cwp2JygrbGnX-BMJlBe5Iu1Dndu7PVKj12Zg==/"> Start Now </a></button>
             </div>
             <div class="course-item">
                 <img src="images/C.jpeg" alt="Data Science">
@@ -279,7 +285,7 @@
                 <p>Learn Data Science Tutorial - Full Course for Beginners</p>
                 <div class="instructor">Instructor: FreeCodeCamp </div>
                 <div class="students"> 3.7M Students</div>
-                <button class="btn-enroll"> <a href="https://youtu.be/ua-CiDNNj30?si=naOwQgziLSTTm-Mn"> Enroll Now </a></button>
+                <button class="btn-enroll"> <a href="https://youtu.be/ua-CiDNNj30?si=naOwQgziLSTTm-Mn"> Start Now </a></button>
             </div>
             <div class="course-item">
                 <img src="images/Graphic.jpeg" alt="Graphic Design">
@@ -287,7 +293,7 @@
                 <p> Learn the fundamentals of design in this graphic design basics course.</p>
                 <div class="instructor">Instructor: Envato Tuts</div>
                 <div class="students">2.3M Students</div>
-                <button class="btn-enroll"> <a href="https://youtu.be/GQS7wPujL2k?si=-c6Z1yzU1IVm7jWz"> Enroll Now </a></button>
+                <button class="btn-enroll"> <a href="https://youtu.be/GQS7wPujL2k?si=-c6Z1yzU1IVm7jWz"> Start Now </a></button>
             </div>
             <div class="course-item">
                 <img src="images/app.jpeg" alt="App Development">
@@ -295,7 +301,7 @@
                 <p>This step-by-step roadmap covers the essential skills and latest technologies to become an app developer. </p>
                 <div class="instructor">Instructor: Programming with Mosh</div>
                 <div class="students">4.36M Students</div>
-                <button class="btn-enroll"> <a href="https://youtu.be/yye7rSsiV6k?si=WrrNO3XUYhq6R8n5"> Enroll Now</a> </button>
+                <button class="btn-enroll"> <a href="https://youtu.be/yye7rSsiV6k?si=WrrNO3XUYhq6R8n5"> Start Now</a> </button>
             </div>
             <div class="course-item">
                 <img src="images/cloud.jpeg" alt="Cloud Computing">
@@ -303,7 +309,7 @@
                 <p>Cloud Computing Full Course | Cloud Computing Tutorial For Beginners</p>
                 <div class="instructor">Instructor: Simple Learn</div>
                 <div class="students">4.82 Students</div>
-                <button class="btn-enroll"> <a href="https://youtu.be/EN4fEbcFZ_E?si=bk5ExTSaZiInaLHH"> Enroll Now</a></button>
+                <button class="btn-enroll"> <a href="https://youtu.be/EN4fEbcFZ_E?si=bk5ExTSaZiInaLHH"> Start Now</a></button>
             </div>
             <!-- Added 4 more courses -->
             <div class="course-item">
@@ -312,7 +318,7 @@
                 <p>What Is Machine Learning? | Introduction To Machine Learning.</p>
                 <div class="instructor">Instructor: Simple Learn</div>
                 <div class="students">4.85 Students</div>
-                <button class="btn-enroll"> <a href="https://youtu.be/ukzFI9rgwfU?si=womr9xoPaatNMvxX">Enroll Now</a> </button>
+                <button class="btn-enroll"> <a href="https://youtu.be/ukzFI9rgwfU?si=womr9xoPaatNMvxX">Start Now</a> </button>
             </div>
             <div class="course-item">
                 <img src="images/Cyber Security.jpeg" alt="Cybersecurity">
@@ -320,7 +326,7 @@
                 <p>Cyber Security Full course - 11 Hours | Cyber Security Training For Beginners</p>
                 <div class="instructor">Instructor: Edureka</div>
                 <div class="students">1.3M Students</div>
-                <button class="btn-enroll"> <a href="https://www.youtube.com/live/lpa8uy4DyMo?si=p21V64x4n_1ByKpW"> Enroll Now </a> </button>
+                <button class="btn-enroll"> <a href="https://www.youtube.com/live/lpa8uy4DyMo?si=p21V64x4n_1ByKpW"> Start Now </a> </button>
             </div>
             <div class="course-item">
                 <img src="images/photography.jpeg" alt="Photography">
@@ -328,7 +334,7 @@
                 <p>Learn Photography for Beginners | Full photography course</p>
                 <div class="instructor">Instructor: Parker Photographic</div>
                 <div class="students">675k Students</div>
-                <button class="btn-enroll"> <a href="https://youtu.be/yhAmMUi2NmM?si=Zx6_Cc4KLAqnGFW3"> Enroll Now </a></button>
+                <button class="btn-enroll"> <a href="https://youtu.be/yhAmMUi2NmM?si=Zx6_Cc4KLAqnGFW3"> Start Now </a></button>
             </div>
             <div class="course-item">
                 <img src="images/Public.jpeg" alt="Public Speaking">
@@ -336,7 +342,7 @@
                 <p>Public speaking for beginners. FREE 7 Instant Tips for Confident & Composed Public Speaking</p>
                 <div class="instructor">Instructor:Communication Coach Alexander Lyon</div>
                 <div class="students">683k Students</div>
-                <button class="btn-enroll"> <a href="https://youtu.be/i5mYphUoOCs?si=Tz4xi6-GgrqJMlx6"> Enroll Now</a> </button>
+                <button class="btn-enroll"> <a href="https://youtu.be/i5mYphUoOCs?si=Tz4xi6-GgrqJMlx6"> Start Now</a> </button>
             </div>
             <div class="course-item">
                 <img src="images/Time Management Tips .jpeg" alt="Public Speaking">
@@ -344,7 +350,7 @@
                 <p>10 Time Management Tips to Boost Your Productivity</p>
                 <div class="instructor">Instructor: Career addict</div>
                 <div class="students">29.4k Students</div>
-                <button class="btn-enroll"> <a href="https://youtu.be/xgp6eELYY1M?si=P8LR2gonmBdHnzTz"> Enroll Now</a> </button>
+                <button class="btn-enroll"> <a href="https://youtu.be/xgp6eELYY1M?si=P8LR2gonmBdHnzTz"> Start Now</a> </button>
             </div>
             <div class="course-item">
                 <img src="images/Database.jpeg" alt="Public Speaking">
@@ -352,7 +358,7 @@
                 <p>This database tutorial will help beginners understand the basics of database management systems</p>
                 <div class="instructor">Instructor:Lucid software</div>
                 <div class="students">495k Students</div>
-                <button class="btn-enroll"> <a href="https://youtu.be/wR0jg0eQsZA?si=SwMqRcqIyOr4cxXU"> Enroll Now</a> </button>
+                <button class="btn-enroll"> <a href="https://youtu.be/wR0jg0eQsZA?si=SwMqRcqIyOr4cxXU"> Start Now</a> </button>
             </div>
         </div>
     </div>
